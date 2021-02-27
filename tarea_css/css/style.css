@@ -1,0 +1,38 @@
+*{
+    margin:3px;
+}
+body{
+    background-color: cornflowerblue;
+    text-align: center;
+    height: 720px;
+}
+header, h2{
+    background-color:palevioletred;
+}
+nav{
+    background-color: paleturquoise;
+}
+section{
+    background-color: lightgreen;
+    display: inline-block;
+    width: 70%;
+    padding: 5% 0;
+}
+article{
+    background-color: mediumpurple;
+    
+    padding: 10% 0;
+}
+aside{
+    background-color:grey;
+    display: inline-block;
+    width: 28%;
+    
+    
+}
+footer{
+    background-color: lightsalmon;
+}
+footer,nav,header{
+    line-height: 100px;
+}
