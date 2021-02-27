@@ -4,7 +4,7 @@
 body{
     background-color: cornflowerblue;
     text-align: center;
-    height: 720px;
+    /*height: 720px;*/
 }
 header, h2{
     background-color:palevioletred;
@@ -16,7 +16,7 @@ section{
     background-color: lightgreen;
     display: inline-block;
     width: 70%;
-    padding: 5% 0;
+    padding: 2% 0;
 }
 article{
     background-color: mediumpurple;
@@ -27,7 +27,8 @@ aside{
     background-color:grey;
     display: inline-block;
     width: 28%;
-    
+    padding: 9% 0;
+
     
 }
 footer{
