@@ -1,0 +1,56 @@
+/*css Tunneado*/
+*{ 
+    box-sizing: border-box;
+    margin:0;
+    border:0;
+}
+body{
+    
+    background-color: cornflowerblue;
+    text-align: center;
+    max-height: calc(100vh - 15px);
+    height: 100%;
+   
+}
+body > *{
+    margin: 3px;
+}
+header, h2{
+    background-color:palevioletred;
+    line-height: 50px;
+}
+nav{
+    background-color: paleturquoise;
+}
+section{
+    background-color: lightgreen;
+    display: inline-block;
+    width: calc(70vw - 18px);
+    height:calc(40vh - 6px);
+    
+}
+section > *{
+    margin: 3px;
+}
+article{
+    background-color: mediumpurple;
+    height: calc(29vh - 6px);
+    padding: 10vh 0;
+}
+aside{
+    background-color:lightgrey;
+    /*display: inline-block;*/
+    padding: 6% 0;
+    height:calc(40vh - 6px);
+    width: calc(30vw - 12px);
+    float: right;
+    line-height: 50px;
+    
+}
+footer{
+    background-color: lightsalmon;
+}
+footer,nav,header{
+    line-height: 100px;
+   height: calc(20vh - 6px);
+}

@@ -1,0 +1,26 @@
+.cuadrado{
+    height: calc(10vw);
+    width: 10vw;
+    background: linear-gradient(to bottom, red, purple);
+}
+
+.rectangulo{
+    background-image: url("https://picsum.photos/id/237/300/150");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(25vw/2);
+    width: 25vw;
+}
+.cuadrado2{
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(to bottom, blue, green);
+}
+
+.circulo{
+    height: calc(500px*6/5);
+    width: calc(500px*6/5);
+    border-radius: 50%;
+    background-color: black;
+}
