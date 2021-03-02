@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Práctica FlexBox CSS</h1>
+    <!---EJERCICIO #1-->
+    <div class="square-wrapper display-flex justify-center align-center">
+        <div class="square-item bg-cian display-flex justify-center align-center">
+            <span>CENTER</span>
+        </div>
+    </div>    
+    <!---EJERCICIO #2-->
+    <div class="square-wrapper display-flex direction-column justify-between">
+        <div class="display-flex justify-between ">
+            <div class="square-item bg-red display-flex justify-center align-center">
+                <span>1</span>
+            </div>
+            <div class="square-item bg-cian display-flex justify-center align-center">
+                <span>2</span>
+            </div>
+        </div>
+        <div class="display-flex justify-between ">
+            <div class="square-item bg-peru display-flex justify-center align-center">
+                <span>3</span>
+            </div>
+            <div class="square-item bg-blue display-flex justify-center align-center">
+                <span>4</span>
+            </div>
+        </div>    
+    </div>
+    <!---EJERCICIO #3-->
+    <div class="square-wrapper display-flex justify-between">
+        <div class="display-flex align-start">
+            <div class="square-item bg-blue display-flex justify-center align-center">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="display-flex align-start">    
+            <div class="square-item bg-cian display-flex justify-center align-center">
+                <span>2</span>
+            </div>
+        </div>
+        <div class="display-flex align-start">
+            <div class="square-item bg-navy display-flex justify-center align-center">
+                <span>3</span>
+            </div>
+        </div>
+        <div class="display-flex align-end">
+            <div class="square-item bg-peru display-flex justify-center align-center">
+                <span>4</span>
+            </div>
+        </div>
+        <div class="display-flex align-end">
+            <div class="square-item bg-red display-flex justify-center align-center">
+                <span>5</span>
+            </div>
+        </div>
+        <div class="display-flex align-end">   
+            <div class="square-item bg-purple display-flex justify-center align-center">
+                <span>6</span>
+            </div>
+        </div>    
+    </div>
+    <!---EJERCICIO #4-->
+    <div class="square-wrapper display-flex  justify-between">
+        <div class="display-flex bg-blue justify-center align-center">
+            <span>BLOQUE LEFT</span>
+        </div>
+        <div class="display-flex justify-around direction-column">
+            <div class="square-item-mini bg-red display-flex justify-center align-center">
+                <span>1</span>
+            </div>
+            <div class="square-item-mini bg-cian display-flex justify-center align-center">
+                <span>2</span>
+            </div>
+            <div class="square-item-mini bg-peru display-flex justify-center align-center">
+                <span>3</span>
+            </div>           
+        </div>
+        <div class="bg-grey display-flex justify-center align-center">
+            <span>BLOQUE RIGHT</span>
+        </div>    
+    </div>
+    <!---EJERCICIO #5-->
+    <div class="square-wrapper display-flex justify-between">
+        <div class="display-flex  justify-center align-center">
+            <div class="square-item bg-red display-flex justify-center align-center">
+                <span>1</span>
+            </div>
+        </div>
+        <div class="display-flex justify-around direction-column">
+            <div class="square-item bg-blue display-flex justify-center align-center">
+                <span>2</span>
+            </div>
+            <div class="square-item bg-cian display-flex justify-center align-center">
+                <span>3</span>
+            </div>
+            <div class="square-item bg-navy display-flex justify-center align-center">
+                <span>4</span>
+            </div>           
+        </div>
+        <div class="display-flex justify-center align-center">
+            <div class="square-item bg-purple display-flex justify-center align-center">
+                <span>5</span>
+            </div>
+        </div>    
+    </div>
+    <!---EJERCICIO #6-->
+    <div class="square-wrapper display-flex direction-column justify-between">
+        <div class="header-item display-flex justify-between ">
+            <div class="square-header-item bg-red display-flex justify-center align-center">
+                <span>header 1</span>
+            </div>
+            <div class="rectangle-header-item bg-grey display-flex justify-center align-center">
+                <span>header 2</span>
+            </div>
+            <div class="square-header-item bg-purple display-flex justify-center align-center">
+                <span>header 3</span>
+            </div>
+        </div>
+        <div class="content-item display-flex justify-between ">
+            <div class="rectangle-content-item bg-cian display-flex justify-center align-center">
+                <span>content 1</span>
+            </div>
+            <div class="rectangle-content-item bg-blue display-flex justify-center align-center">
+                <span>content 2</span>
+            </div>
+        </div> 
+        <div class="footer-item bg-navy display-flex justify-center align-center">
+            <span>Footer</span>
+        </div>   
+    </div>
+    
+</body>
+    
+</html>
