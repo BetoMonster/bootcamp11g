@@ -1,0 +1,36 @@
+.card img{
+    width: 35px;
+    
+
+}
+.img-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#row2 .card{
+    &:first-of-type{
+        border-top: 2px solid red;
+    }
+    &:last-of-type{
+        border-top: 2px solid yellow;
+    }
+
+
+}   
+
+#row3 .card{
+    border-top: 2px solid blue;
+}
+#row1 .card{
+    border-top: 2px solid cyan;
+}
+
+.card{
+    margin-bottom: 1rem;
+}
+
+#main{
+    align-items: center;
+    justify-content: center;
+}
