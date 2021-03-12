@@ -1,0 +1,158 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #b3b5c6;
+}
+
+.card-wrapper {
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid red;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #acacac;
+  -webkit-box-shadow: 3px 3px 5px #ccc;
+          box-shadow: 3px 3px 5px #ccc;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  color: #494c5f;
+  margin-bottom: 1rem;
+}
+
+.card .name,
+.card .price {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card .price {
+  font-size: 3rem;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .price span {
+  font-size: 1.5rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.card ul li {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #6d708d;
+}
+
+.card ul li:first-of-type {
+  border-top: 1px solid #6d708d;
+}
+
+.card .btn {
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, #a3a8f0, #696fdd);
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card .btn:hover {
+  background-image: linear-gradient(315deg, #a3a8f0, #696fdd);
+  cursor: pointer;
+}
+
+.card:hover {
+  color: white;
+  background-image: linear-gradient(45deg, #a3a8f0, #696fdd);
+}
+
+.card:hover .btn {
+  background-image: none;
+  color: #6d708d;
+}
+
+/*
+- a partir de 768px, sólo se vean la 1a y la 3er card
+- en desktop, el body debe tener fondo blanco
+- para tablet, las cards deberían aparecer de forma horizontal dentro del contenedor
+- en desktop, se debe de invertir el orden de las cards*/
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+  .card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .card-wrapper :nth-child(2) {
+    display: none;
+  }
+  .card-wrapper .card .btn {
+    background-color: peru;
+    background-image: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: white;
+  }
+  .card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 992px;
+  }
+  .card .btn {
+    background-color: peru;
+    background-image: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
