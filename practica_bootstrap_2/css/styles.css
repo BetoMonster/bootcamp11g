@@ -1,3 +1,7 @@
+h1 {
+  font-size: 22pt;
+}
+
 .card img {
   width: 35px;
 }
@@ -38,5 +42,49 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.container {
+  background-color: white;
+  border: 1px solid grey;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .title {
+    margin: .5rem 0;
+  }
+  .title p {
+    width: 50%;
+    margin: 0 auto 2rem;
+  }
+  .container {
+    padding: 2rem;
+  }
+  body {
+    height: 100vh;
+  }
+  h1 {
+    font-size: 36pt;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
