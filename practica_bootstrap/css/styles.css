@@ -1,0 +1,55 @@
+.bg-orange{
+    background-color:orange;
+}
+.bg-brown{
+    background-color: brown;
+}
+.bg-purple{
+    background-color: purple;
+}
+.bg-pink{
+    background-color: palevioletred;
+}
+
+@media (min-width: 768px) { 
+    div.row2    {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+    .row2 div.row2-pink{
+        order: 1;
+    }
+    .row2 div.row2-green{
+        order: 2;
+    }
+    .row2 div.row2-brown{
+        order: 3;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    div.bg-change    {
+        background-color: palevioletred!important;
+    }
+
+    div.row2    {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .row2 div.row2-pink{
+        order: 3;
+    }
+   
+    .row2 div.row2-brown{
+        order: 1;
+    }
+
+    div.row3{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .w-especific{
+        width: 41.6%;
+    }
+}
