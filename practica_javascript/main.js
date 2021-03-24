@@ -43,11 +43,11 @@ function ejercicio2() {
       case "Mexico":
         switch(true){
           //  Inferior General
-          case myHeight < 160.8:
+          case myHeight < 169.9:
             general = " e inferior al promedio general";
           break;
           //  Superior General
-          case myHeight > 160.8:
+          case myHeight > 169.9:
             general =" y superior al promedio general";
           break;
           //  igual General
