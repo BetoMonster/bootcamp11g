@@ -9,23 +9,23 @@ function Product(nameProduct, descriptionProduct, costProduct, catProduct, gainP
     this.prices = pricesProduct;
     this.sales = salesProduct;
     this.expiration = expirationProduct;
-    this.priceSale = 0 //this.priceSaleFunction();
-
+   
     this.priceSaleFunction = function() {
-        //con esto se saca solo la ganacia + costo del producto
+        //con esto se saca solo la ganacia + costo del producto o price * 1.(ganancia)
         result = (this.cost*this.gain) + this.cost
         this.priceSale=result;
         return result
     }
+    this.priceSale = this.priceSaleFunction();
 
     this.getDateExpiration = function(){
         let today = new Date();
         let expDate = new Date(this.expiration);
-        let diff_in_millisenconds = expDate-today
+        let diffInMillisenconds = expDate-today
          // (1000*60*60*24) --> milisegundos -> segundos -> minutos -> horas -> días
-        let day_as_milliseconds = 86400000;
-        let diff_in_days = diff_in_millisenconds / day_as_milliseconds;
-        return diff_in_days.toFixed(2)
+        let dayAsMilliseconds = 86400000;
+        let diffInDays = diffInMillisenconds / dayAsMilliseconds;
+        return diffInDays.toFixed(2)
     }
 
     this.averageSixMonths=function(){
