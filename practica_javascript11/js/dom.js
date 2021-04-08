@@ -1,4 +1,4 @@
-namesArray=["Jaime","Beto","Mariana"]
+/*namesArray=["Jaime","Beto","Mariana"]
 
 const printList =() =>{
     let list = document.createElement("ul")
@@ -13,7 +13,7 @@ const printList =() =>{
     document.body.appendChild(list)
 }
 printList()
-
+*/
 let mentorsArray = [
     {
         name:"Israel Salinas Martinez",
@@ -131,56 +131,132 @@ let AverageArray = mentorsArray.map( (mentor,index) => {
 */
 //console.log( AverageArray );
 
+const createTd =(child,parent) =>{
+    let td=document.createElement("td")
+    td.appendChild(child)
+    parent.appendChild(td)
+    return td
+}
+let table1 = document.createElement("table")
+    table1.setAttribute('id', 'tableMentors');
+
 const printTable =() =>{
     
-    let table1 = document.createElement("table")
+    
     //thead
     let thead = document.createElement("thead")
-    let arrayTitles=["NOMBRE","HTML","CSS","JS","REACT","PROMEDIO"]
-        let rowTitles=document.createElement("tr")
-        arrayTitles.forEach(title=>{
-            let td=document.createElement("td")
-            let tdText=document.createTextNode(title)
-            td.appendChild(tdText)
-            rowTitles.appendChild(td)
+    let arrayTitles=["NOMBRE","HTML","CSS","JS","REACT","PROMEDIO",""]
+    let rowTitles=document.createElement("tr")
+    arrayTitles.forEach(title=>{       
+        let tdText=document.createTextNode(title)
+        createTd(tdText,rowTitles)
     })
     thead.appendChild(rowTitles)
     table1.appendChild(thead)
     //tbody
     let tbody = document.createElement("tbody")
-    mentorsArray.forEach(element => {
+    let sumAverages=0
+    mentorsArray.forEach((element,index) => {
   
         let rowItem=document.createElement("tr")
-        let tdName=document.createElement("td")
         let tdNameText=document.createTextNode(element.name)
-        rowItem.appendChild(tdName)
-        tdName.appendChild(tdNameText)
+        createTd(tdNameText,rowItem)
         let sumScores=0
         element.scores.forEach(item=>{
-            let td=document.createElement("td")
-            let tdText=document.createTextNode(item.score)
-            td.appendChild(tdText)
-            rowItem.appendChild(td)
+            let tdScoreText=document.createTextNode(item.score)
+            td=createTd(tdScoreText,rowItem)          
             sumScores+=item.score
+            item.score<9? td.classList.add("bg-warning"): td.classList.add("bg-success")
         })
         average=sumScores/element.scores.length
-        //console.log(average)
-
-        let tdAverage=document.createElement("td")
+        sumAverages+=average
         let tdAverageText=document.createTextNode(average)
-        tdAverage.appendChild(tdAverageText)
-        rowItem.appendChild(tdAverage)
-        
-
-       tbody.appendChild(rowItem)  
-       table1.appendChild(tbody) 
+        tdAverage=createTd(tdAverageText,rowItem)
+        //average<9? tdAverage.classList.add("bg-warning"): tdAverage.classList.add("bg-success")
+        //
+        let bntDelMentor=document.createElement("button")
+        bntDelMentor.setAttribute('data-mentor-id', index);
+        bntDelMentor.setAttribute('id', index);
+        bntDelMentor.setAttribute('class', 'btn-delete');
+        bntDelMentor.textContent = 'borrar';
+        createTd(bntDelMentor,rowItem)
+        tbody.appendChild(rowItem)  
+        table1.appendChild(tbody) 
     });
-
+    
+    
     //
+    
     let tfoot = document.createElement("tfoot")
-    //let 
-
+    let rowfoot=document.createElement("tr")
+    
+    for(i=1;i<6;i++){
+        createTd(document.createTextNode(""),rowfoot)        
+    }
+    let avgGeneral=sumAverages/mentorsArray.length
+    //console.log(avgGeneral)
+    let tdAverageGeneralText=document.createTextNode(avgGeneral)
+    tdAverageGeneral = createTd(tdAverageGeneralText,rowfoot)
+    tfoot.appendChild(rowfoot)
+    //avgGeneral<9? tdAverageGeneral.classList.add("bg-warning"): tdAverageGeneral.classList.add("bg-success")
+    
     table1.appendChild(tfoot)
-    document.body.appendChild(table1)
+    table1.setAttribute('class', 'p-3 m-3 w-75 border text-center');
 }
+document.body.appendChild(table1)
+
 printTable()
+
+const addTableFunctions = () =>{
+    alltd=document.querySelectorAll("td")
+
+    alltd.forEach(celda=>{
+        celda.classList.add("border")
+    })
+
+    allButtonsDelete=document.querySelectorAll("td button.btn-delete")
+
+    allButtonsDelete.forEach(bntDelete=>{
+        bntDelete.addEventListener('click', event => {
+            console.log( event.target.innerText )
+            console.log( event.target.dataset )
+            let mentorId = event.target.dataset.mentorId
+            console.log( mentorId )
+            deleteMentor(mentorId)
+            
+           // addTableFunctions()
+            console.log(mentorsArray)
+        })
+    })
+    
+}    
+addTableFunctions()
+
+const countWarningScores = () =>{
+    warningScore= document.querySelectorAll("td.bg-warning")
+    console.log(warningScore.length)
+    return warningScore.length
+}
+
+let btn=document.createElement("button")
+btn.setAttribute('id', 'countScores');
+//btn.textContent = 'Calificaciones en Riesgo';
+document.body.appendChild(btn);
+
+document.getElementById('countScores').innerText="Calificaciones en Riesgo"
+document.getElementById('countScores').addEventListener('click', function(){
+    alert("El numero de calificaciones en riesgo es: " + countWarningScores())
+})
+
+
+
+const deleteMentor= (idMentor)=>{
+    
+    mentorsArray.splice(idMentor, 1);
+    while (tableMentors.lastElementChild) {
+        tableMentors.removeChild( tableMentors.lastElementChild );
+    }
+    printTable()
+    addTableFunctions()
+    
+}
