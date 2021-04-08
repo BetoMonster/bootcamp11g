@@ -78,7 +78,8 @@ const deleteMentor = event => {
         if (this.readyState == 4 && this.status == 200) {
             let response = xhttp.responseText
             console.log('delete;', response  )
-            getMentors()            
+            getMentors() 
+            addDeleteListeners()           
         }
     }
 
