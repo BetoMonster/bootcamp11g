@@ -1,0 +1,99 @@
+.text-blue{
+  color: #0060ae;
+}
+.logo{
+  width: 100px;
+  cursor: pointer;
+}
+
+.text-muted {
+  font-size: 14px;
+}
+
+#posts-wrapper {
+  padding: 1.5em;
+}
+
+.card-body{
+  padding: 0 auto;
+}
+.autor img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/*Estilo para el boton de "mostrar comentarios"*/
+#all-comments{
+  background: none;
+  color: #4f4f4f;
+  border: none;
+  display: inherit;
+  margin: 0 0 0 12px;
+  font-size: 9pt;
+}
+
+#all-comments a{
+    font-size: 11pt;
+}
+
+.comment-autor{
+  font-size: 14pt;
+}
+
+.comment-text{
+  font-size: 11pt;
+}
+
+.comment-date{
+  font-size: 8pt;
+}
+
+.archive{
+  margin-top: 14px;
+  display: block;
+}
+
+
+/*Estilo para el primer comentario*/
+.first-list-item{
+  background: #fff;
+  border: 1px solid #DFDFDF;
+  list-style: none;
+  padding: 20px;
+}
+
+/*Estilo para el boton de agregar post*/
+.add-post{
+  position: fixed;
+  bottom: 0;
+  margin: 2%;
+}
+
+/*Estilos apra las cards*/
+.card {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (min-width: 770px){
+  .card {
+    width: 80%;
+    margin: auto;
+  }
+}
+button{
+  white-space:nowrap;
+}
+
+.post-list-image{
+  width: 100%;
+  height: 277px;
+  object-fit: cover;
+}
+.post-image{
+  width: 100%;
+  height: 277px;
+  object-fit: cover;
+  object-position: center center;
+}
